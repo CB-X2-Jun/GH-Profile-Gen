@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github主页生成器</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <h1>GH Markdown 生成器</h1>
+    <input type="text" id="username" placeholder="GitHub 用户名" />
+    <input type="text" id="avatar" placeholder="头像链接" />
+    <textarea id="bio" placeholder="简介"></textarea>
+    <button id="generateButton">生成 Markdown</button>
+    <pre id="output"></pre>
+    <button id="copyButton">复制到剪贴板</button>
+</div>
+<footer>
+    <p>Copyright &copy; 2024 Eternity-Sky. All rights reserved.
+        <a href="https://github.com/Eternity-Sky/GH-Profile-Gen" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+    </p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
