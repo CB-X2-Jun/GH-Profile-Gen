@@ -1,20 +1,27 @@
 const usernameInput = document.getElementById('username');
-const avatarInput = document.getElementById('avatar');
-const bioInput = document.getElementById('bio');
 const outputDiv = document.getElementById('output');
 const generateButton = document.getElementById('generateButton');
 const copyButton = document.getElementById('copyButton');
 
 generateButton.addEventListener('click', () => {
-    const username = usernameInput.value;
-    const avatar = avatarInput.value;
-    const bio = bioInput.value;
+    const username = usernameInput.value.trim();
+
+    if (username === "") {
+        alert("请输入有效的 GitHub 用户名！");
+        return;
+    }
 
     const markdown = `
-![${username}](${avatar})
 ## ${username}
-${bio}
-    `.trim();
+
+### 关于我
+嗨，我是${username}，欢迎来到我的GitHub主页！
+
+### 统计信息
+![访问量](https://komarev.com/ghpvc/?username=${username}&label=访问量&color=orange)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=radical)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=radical)
+`.trim();
 
     outputDiv.textContent = markdown;
 });
