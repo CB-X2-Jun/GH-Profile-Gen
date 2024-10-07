@@ -18,9 +18,8 @@ generateButton.addEventListener('click', () => {
 嗨，我是${username}，欢迎来到我的GitHub主页！
 
 ### 统计信息
-![访问量](https://komarev.com/ghpvc/?username=${username}&label=访问量&color=orange)
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=radical)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=radical)
+![我的 GitHub 数据](https://stats.justsong.cn/api/github?username=${username})
+
 `.trim();
 
     outputDiv.textContent = markdown;
