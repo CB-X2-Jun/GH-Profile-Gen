@@ -7,15 +7,16 @@ generateButton.addEventListener('click', () => {
     const username = usernameInput.value.trim();
 
     if (username === "") {
-        alert("请输入有效的 GitHub 用户名！");
+        alert("请输入有效的 GitHub 用户名哦。没有人的 GitHub 用户名是空的。");
         return;
     }
 
     const markdown = `
+## Hi!
 ## ${username}
 
 ### 关于我
-嗨，我是${username}，欢迎来到我的GitHub主页！
+嗨，我是 ${username}，欢迎来到我的 GitHub 主页！
 
 ### 统计信息
 ![我的 GitHub 数据](https://stats.justsong.cn/api/github?username=${username})
