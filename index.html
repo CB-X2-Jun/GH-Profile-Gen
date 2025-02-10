@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub 主页 README 生成器</title>
     <link rel="icon" href="/favicon.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -18,6 +20,20 @@
     <pre id="output"></pre>
     <button id="copyButton">复制</button>
 </div>
+    <div id="gitalk-container">
+        <script>
+            var gitalk = new Gitalk({
+  clientID: 'Ov23liiai8mtl1Hh69Dj',
+  clientSecret: 'ed15ded8e5aa8fb69b4cf213e6d173f2f6f1a48c',
+  repo: 'GH-Profile-Gen',
+  owner: 'CB-X2-Jun',
+  admin: ['CB-X2-Jun'],
+  id: location.pathname,      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+})
+
+gitalk.render('gitalk-container')
+        </script></div>
 <footer>
     <p><a href="https://eternity-sky.github.io/GH-Profile-Gen">https://eternity-sky.github.io/GH-Profile-Gen</a>
         <a href="https://github.com/CB-X2-Jun/GH-Profile-Gen" target="_blank">
